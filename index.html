@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Background Color</title>
+  <style>
+    body {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleButton">Toggle Background</button>
+
+  <script>
+    // Create a button element
+    var button = document.createElement("button");
+
+    // Set the button's text
+    button.innerText = "Toggle Background";
+
+    // Add an event listener to the button
+    button.addEventListener("click", function() {
+      // Get the current background color of the document body
+      var currentColor = document.body.style.backgroundColor;
+
+      // Toggle between two different background colors
+      if (currentColor === "red" || currentColor === "") {
+        document.body.style.backgroundColor = "blue";
+      } else {
+        document.body.style.backgroundColor = "red";
+      }
+    });
+
+    // Append the button to the body
+    document.body.appendChild(button);
+  </script>
+</body>
+</html>
 
